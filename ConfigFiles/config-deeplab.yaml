@@ -1,0 +1,21 @@
+# Training configs for Seg
+
+dataset : Wheat and oilseed rape Dataset
+channels : 7
+n_classes : 2
+ignore_index : 255
+net : DeepLab
+optimizer : Adam
+scheduler : StepLR
+lr : 0.0001
+batchsize : 4
+start_epoch : 0
+end_epoch : 100
+result_dir : "./deeplab+7_yuanshi_Adam_lr=0.0001"
+criterion : weight_crossentropy
+logIterval : 20
+valIterval : 1
+resume :
+  flag : False
+ # state_path : "./eventfiles-deeplab-channels7/DeepLab-ep114.pth"
+  state_path : "F:/net/deeplab+7_Adam_lr=0.0001/DeepLab-0.9350-ep53.pth"
